@@ -76,23 +76,3 @@ Modern C++ introduces move semantics to efficiently transfer ownership of tempor
 
 ---
 
-## 🔍 Visual Representation
-
-```mermaid
-flowchart TD
-    A[Function Call] --> B[Call by Value]
-    A --> C[Call by Reference]
-    A --> D[Call by Pointer]
-    A --> E[Call by Move]
-
-    B --> B1[Creates Copy]
-    B1 --> B2[Original Unchanged]
-
-    C --> C1[Uses Reference (&)]
-    C1 --> C2[Direct Access to Original]
-
-    D --> D1[Pass Memory Address (*ptr)]
-    D1 --> D2[Dereference to Modify]
-
-    E --> E1[Uses Rvalue Ref (&&)]
-    E1 --> E2[Transfers Ownership of Resources]
