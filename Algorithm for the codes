@@ -1,0 +1,76 @@
+# 📘 Algorithms for C++ Programs
+
+This document outlines the step-by-step logic (algorithms) for the provided C++ code files.
+
+---
+
+## 🔢 Algorithm for `exp10a.cc` & `exp10b.cc` (Swapping Two Numbers)
+
+This algorithm describes the process of swapping two integer values.  
+The core logic is the same for both **call by value** and **call by reference**; the difference lies in whether the original variables are affected.
+
+**Steps:**
+1. Start  
+2. Declare two integer variables, `a` and `b`.  
+3. Prompt the user to enter the first number and store it in `a`.  
+4. Prompt the user to enter the second number and store it in `b`.  
+5. Display the values of `a` and `b` before the swap.  
+6. Call the swap function with `a` and `b` as arguments.  
+7. Inside the swap function (parameters `x`, `y`):  
+   - Declare a temporary integer variable, `temp`.  
+   - Assign the value of `x` to `temp`. (`temp = x`)  
+   - Assign the value of `y` to `x`. (`x = y`)  
+   - Assign the value of `temp` to `y`. (`y = temp`)  
+8. Display the values of `a` and `b` after the swap function has executed.  
+9. End  
+
+---
+
+## 💰 Algorithm for `exp10c.cc` (Employee Salary Hike)
+
+This algorithm determines if an employee is eligible for a salary hike based on meeting at least **three out of four conditions**.
+
+**Steps:**
+1. Start  
+2. Declare variables: `years_completed`, `research_projects`, `new_research_projects`, and `company_profit`.  
+3. Initialize an integer counter `conditions_met` to `0`.  
+4. Input: Prompt the user to enter values for all four variables.  
+5. Condition Check:  
+   - If `years_completed > 1`, increment `conditions_met`.  
+   - If `research_projects >= 1`, increment `conditions_met`.  
+   - If `new_research_projects >= 1`, increment `conditions_met`.  
+   - If `company_profit > 100,000`, increment `conditions_met`.  
+6. Eligibility Decision:  
+   - If `conditions_met >= 3`:  
+     - Display a congratulatory message.  
+     - Prompt the user to enter their `current_salary`.  
+     - Call the `bonus` function, passing the memory address of `current_salary`.  
+     - Inside the `bonus` function: calculate the new salary by adding a **20% bonus** to the value at the received memory address.  
+     - Display the updated salary.  
+   - Else (if `conditions_met < 3`):  
+     - Display a message stating the user is not eligible for a hike.  
+7. End  
+
+---
+
+## 🔄 Algorithm for `exp10d.cc` (String Reversal)
+
+This algorithm reverses a given string in-place by swapping characters from the beginning and end of the string.
+
+**Steps:**
+1. Start  
+2. Declare a character array `userInput` with a fixed maximum size.  
+3. Prompt the user to enter a string and store it in `userInput`.  
+4. Display the original string.  
+5. Call the `reverseString` function with `userInput` as the argument.  
+6. Inside the `reverseString` function (parameter `str`):  
+   - Determine the length of the string, `n`, by counting characters until the null terminator (`\0`) is reached.  
+   - Start a loop that iterates from `i = 0` up to (but not including) `n / 2`.  
+   - Inside the loop, swap the characters at the start and end positions:  
+     - Store `str[i]` in a temporary variable `temp`.  
+     - Set `str[i] = str[n - i - 1]`.  
+     - Set `str[n - i - 1] = temp`.  
+7. Display the modified (reversed) `userInput` string.  
+8. End  
+
+---
